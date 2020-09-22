@@ -1,0 +1,58 @@
+body {
+  background-image: url("imgs/homebackground.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+h1 {
+  text-align: center;
+  margin: 50px auto;
+  padding: 10px;
+  cursor: pointer;
+}
+
+h1 a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.imgs {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.img > img {
+  width: 40vw;
+  border-radius: 30px;
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 30px;
+  transition: all 500ms ease;
+}
+
+.img:hover {
+  background-color: beige;
+  transform: scale(1.1);
+}
+
+.img > span {
+  padding-top: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .imgs {
+    flex-direction: column;
+  }
+  .img > img {
+    width: 70vw;
+    align-items: center;
+  }
+}
