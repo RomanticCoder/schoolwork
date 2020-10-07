@@ -10,9 +10,6 @@ $years =  filter_input(
     'years',
     FILTER_VALIDATE_INT
 );
-//This should be replaced with a proper filter_input method call
-
-//Here is where you should create the add the interest_rate variable and get it via the filter_input method
 $interest_rate = filter_input(INPUT_POST, 'interest_rate', FILTER_VALIDATE_FLOAT);
 
 // validate investment
