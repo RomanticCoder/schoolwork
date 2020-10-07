@@ -1,18 +1,17 @@
 <?php
-
 //set default value of variables for initial page load
+// this is where you should check to see if the interest_rate and $years are set
 if (!isset($investment)) {
   $investment = '';
 }
-// this is where you should check to see if the interest_rate and $years are set
 if (!isset($interest_rate)) {
   $interest_rate = '';
 }
 if (!isset($years)) {
   $years = '';
 }
-
 ?>
+
 <!DOCTYPE html>
 <html>
 

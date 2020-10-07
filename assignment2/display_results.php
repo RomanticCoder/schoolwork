@@ -36,7 +36,6 @@ if (empty($investment)) {
     }
 }
 
-
 // if an error message exists, go to the index page
 if (!empty($error_message)) {
     //This redirects us to the index.php page again and displays the error_message
@@ -44,21 +43,18 @@ if (!empty($error_message)) {
     exit();
 }
 
-
-
 // calculate the future value
 $future_value = $investment;
 for ($i = 1; $i <= $years; $i++) {
     $future_value += $future_value * $interest_rate * .01;
 }
 
-
-
 // Here is where you should set the correct currency and percent formatting
 $investment_f = "$" . number_format($investment, 2); //replace this empty string with the correct number_format call
 $yearly_rate_f = $interest_rate . "%"; //replace this empty string with the correct number_format call
 $future_value_f = "$" . round($future_value, 2); //replace this empty string with the correct number_format call
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -84,9 +80,7 @@ $future_value_f = "$" . round($future_value, 2); //replace this empty string wit
         <span><?php echo $future_value_f; ?></span><br>
 
         <div id="buttons">
-
             <button onclick="document.location='index.php'">Try Again</button>
-
         </div>
     </main>
 </body>
